@@ -1,0 +1,12 @@
+{% extends 'base.htm' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block style %} <link rel="stylesheet" href="{% static 'styles/download.css' %}"> {% endblock style %}
+
+{%block body%}
+    <div class="down-container">
+        <h2>File is converted </h2>
+        <a href="{{ convertedImg }}" download>Download</a>
+    </div>
+
+{%endblock body%}

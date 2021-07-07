@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}">
+    <title>{%block title%}{%endblock title%}</title>
+    {% block style %}{% endblock style %}
+
+</head>
+<body>
+     <!-- start navigation -->
+     <header>
+        <div class="container">
+            <div class="site-title">
+                <h1>Media Solutions</h1>
+                <p class="subtitle">A place to resolve media</p>
+            </div>
+            <nav>
+                <ul class="nav-list">
+                    <li class="nav-list-items"><a href="/" class="current-page">Home</a></li>
+                    <li class="nav-list-items"><a href="#">About me</a></li>
+                    <li class="nav-list-items"><a href="#">Video Convertor</a></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+    <!-- navigation ends -->
+
+    <!-- common body for other templates -->
+    {%block body%}{%endblock body%}
+    <!-- body end's -->
+
+</body>
+</html>

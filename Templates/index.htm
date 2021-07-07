@@ -1,0 +1,25 @@
+{% extends 'base.htm' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block style %} <link rel="stylesheet" href="{% static 'styles/index.css' %}"> {% endblock style %}
+
+
+{%block body%}
+
+
+    <fieldset class="field">
+        <form action="/makechange" method="POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="input-field">
+               {{form.image}}
+            </div>
+            <div class="input-field">
+                <label for="cars">Choose a format:</label>
+                {{form.desired_format}}
+            </div>
+            <div class="input-field">
+                <button type="submit">Convert</button>
+            </div>
+        </form>
+    </fieldset>
+{%endblock body%}
